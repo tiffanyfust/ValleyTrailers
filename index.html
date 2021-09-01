@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Valley Trailers</title>
     <link rel="icon" href="/assets/icons8_alps_20_HWn_icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,7 +19,7 @@
             </div>
             <div class="leftNav">
                 <ul class="menu">
-                    <li><a href="">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="">Trailers</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Contact</a></li>
@@ -34,6 +37,7 @@
             </div>
         </nav>
         <div class="headerVid">
+            <h1 class="heading">Need a travel trailer for your next Adventure?</h1>
             <video src="/assets/bonfire-vid-small.mp4" autoplay muted loop></video>
         </div>
     </header>
@@ -48,12 +52,14 @@
                     <button type="submit" class="submit">Search</button>
                 </form>
             </section>
-            <section>
-                <h2>Trailers</h2>
-                <ul>
-                    <li>
+            <section class="trailerSection">
+                <h2 class="trailerHeading">Travel Trailers</h2>
+                <ul class="trailerList">
+                    <li class="trailer trailer1">
                         <a href="">
-                            <img src="https://placebear.com/300/200" alt="">
+                            <div class="trailerImg">
+                                <img src="assets/Trailers/24-travel-trailer.jpg" alt="">
+                            </div>
                             <div class="details">
                                 <ul>
                                     <li>Sleeps: 4</li>
@@ -65,23 +71,11 @@
                             </div>
                         </a>
                     </li>
-                    <li>
+                    <li class="trailer trailer2">
                         <a href="">
-                            <img src="https://placebear.com/300/200" alt="">
-                            <div class="details">
-                                <ul>
-                                    <li>Sleeps: 4</li>
-                                </ul>
+                            <div class="trailerImg">
+                                <img src="assets/Trailers/2018-trailer.jpg" alt="">
                             </div>
-                            <div class="description">
-                                <h3>Trailer</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat cupiditate sit corrupti esse, beatae, nesciunt, officiis culpa illo soluta veritatis possimus architecto facilis voluptate error! In voluptatem non perferendis nisi!</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="https://placebear.com/300/200" alt="">
                             <div class="details">
                                 <ul>
                                     <li>Sleeps: 4</li>
@@ -98,61 +92,85 @@
         </div>
         <section class="steps">
             <div class="wrapper">
-                <ul>
+                <ul class="stepsList">
                     <li>
-                        <div>
-                            <img src="/assets/icons8-trailer-80.png" alt="">
+                        <div class="stepImg">
+                            <img src="/assets/icons8-caravan-60.png" alt="">
                         </div>
                         <div>
                             <h3>Step 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus recusandae incidunt cum! Animi maxime illum possimus quis dicta, dolore repellendus, nesciunt amet assumenda non nisi tenetur hic, ipsam et.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus recusandae incidunt cum!</p>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <img src="/assets/icons8-mail-80.png" alt="">
+                        <div class="stepImg">
+                            <img src="/assets/icons8-mail-60.png" alt="">
                         </div>
                         <div>
                             <h3>Step 2</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus recusandae incidunt cum! Animi maxime illum possimus quis dicta, dolore repellendus, nesciunt amet assumenda non nisi tenetur hic, ipsam et.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus recusandae incidunt cum!</p>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <img src="/assets/icons8-cash-in-hand-80.png" alt="">
+                        <div class="stepImg">
+                            <img src="/assets/icons8-money-60.png" alt="">
                         </div>
                         <div>
                             <h3>Step 3</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus recusandae incidunt cum! Animi maxime illum possimus quis dicta, dolore repellendus, nesciunt amet assumenda non nisi tenetur hic, ipsam et.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus recusandae incidunt cum!</p>
                         </div>
                     </li>
                     <li>
-                        <div>
-                            <img src="/assets/icons8-earth-element-80.png" alt="">
+                        <div class="stepImg">
+                            <img src="/assets/icons8-hills-60.png" alt="">
                         </div>
                         <div>
                             <h3>Step 4</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus recusandae incidunt cum! Animi maxime illum possimus quis dicta, dolore repellendus, nesciunt amet assumenda non nisi tenetur hic, ipsam et.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam delectus recusandae incidunt cum!</p>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <section>
+        <section class="campgroundSection">
             <div class="wrapper">
                 <h2>Popular Campgrounds</h2>
-                <ul>
-                    <li>
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><img src="https://placebear.com/200/400" alt=""></a>
+                <ul class="campgroundList">
+                    <li class="campground campground1">
+                        <a href="https://bcparks.ca/explore/parkpgs/cultus_lk/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/Campgrounds/cultus-lake.jpg" alt="">
+                            <div class="overlay">
+                                <h3>Cultus Lake</h3>
+                                <p>Click for Campground Details</p>
+                            </div>
+                        </a>
                     </li>
-                    <li>
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><img src="https://placebear.com/400/200" alt=""></a>
+                    <li class="campground campground2">
+                        <a href="https://bcparks.ca/explore/parkpgs/sasquatch/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/Campgrounds/hicks-lake.jpg" alt="">
+                            <div class="overlay">
+                                <h3>Hick's Lake</h3>
+                                <p>Click for Campground Details</p>
+                            </div>
+                        </a>
                     </li>
-                    <li>
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><img src="https://placebear.com/400/200" alt=""></a>
+                    <li class="campground campground3">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <img src="https://placebear.com/400/200" alt="">
+                            <div class="overlay">
+                                <h3>Campground</h3>
+                                <p>Click for Campground Details</p>
+                            </div>
+                        </a>
                     </li>
-                    <li>
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><img src="https://placebear.com/200/400" alt=""></a>
+                    <li class="campground campground4">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <img src="https://placebear.com/200/400" alt="">
+                            <div class="overlay">
+                                <h3>Campground</h3>
+                                <p>Click for Campground Details</p>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -168,12 +186,14 @@
             </ul>
         </div>
     </footer>
+    <div class="wrapper"><span class="copyright">Copyright &copy; Valley Trailers</span></div>
 </body>
 </html>
 
-<!-- <a target="_blank" href="https://icons8.com/icon/53162/trailer">Trailer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-<!-- <a target="_blank" href="https://icons8.com/icon/42058/mail">Mail</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-<!-- <a target="_blank" href="https://icons8.com/icon/53531/cash-in-hand">Cash in Hand</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
-<!-- <a target="_blank" href="https://icons8.com/icon/c97ZgVyFlZ-7/earth-element">Earth Element</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+<!-- <a target="_blank" href="https://icons8.com/icon/TIpmutXjVNRw/caravan">Caravan</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+<!-- <a target="_blank" href="https://icons8.com/icon/FexH3pT27Utr/mail">Mail</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+<!-- <a target="_blank" href="https://icons8.com/icon/RunpmESq72DG/hills">Hills</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+<!-- <a target="_blank" href="https://icons8.com/icon/Gmdx1GRbfEnd/forest">Forest</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+<!-- <a target="_blank" href="https://icons8.com/icon/RSkiVXl0PqtG/money">Money</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
 
 <!-- <a target="_blank" href="https://icons8.com/icon/L5GxDNDJeZjT/alps">Alps</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
