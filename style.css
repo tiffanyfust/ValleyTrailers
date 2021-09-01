@@ -8,18 +8,31 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+/* Colors */
+
+:root {
+    --turquoise: #1bcbb5;
+    --lightBlue: #2eb8b8;
+    --darkBlue: #09285e;
+    --purple: #9e79ec;
+    --grey: #d7dce0;
+    --black: #131720;
+}
+
+
 
 /* General Styles */
 
 html,
 body {
     margin: 0;
-    padding: 0 30px;
+    padding: 0 25px;
     overflow-x: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .wrapper {
-    max-width: 1300px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
@@ -35,6 +48,12 @@ li {
 
 a {
     text-decoration: none;
+    color: var(--black);
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 /* Nav Styling */
@@ -44,12 +63,51 @@ nav {
     justify-content: space-between;
 }
 
+.logoContainer {
+    width: 70px;
+}
+
 .leftNav {
     display: flex;
+    align-items: center;
 }
 
 .menu {
     display: flex;
+}
+
+.menu::after {
+    content: '';
+    background-color: var(--turquoise);
+    width: 2px;
+}
+
+.menu li {
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: var(--turquoise);
+}
+
+.menu a::after {
+    content: '';
+    display: block;
+    background-color: var(--turquoise);
+    margin-top: 8px;
+    height: 2px;
+    width: 0px;
+    transition: width .2s linear;
+
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.contactInfo {
+    margin-left: 20px;
 }
 
 .headerVid {
@@ -61,3 +119,31 @@ video {
     width: 100%;
 }
 
+
+/* Form Styling */
+
+.formSection {
+    display: none;
+    justify-content: center;
+    position: relative;
+    background-color: var(--grey);
+    padding: 40px;
+    border-radius: 7px;
+    margin-top: -50px;
+    z-index: 1;
+}
+
+input {
+    padding: 10px;
+    border: none;
+}
+
+.submit {
+    padding: 10px 20px;
+    background-color: var(--turquoise);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
