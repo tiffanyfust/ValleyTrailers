@@ -11,12 +11,13 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 /* Colors */
 
 :root {
-    --turquoise: #1bcbb5;
-    --darkBlue: #09285e;
-    --purple: #9e79ec;
-    --grey: #c3c6c8;
-    --darkGrey: #646668;
-    --black: #131720;
+    --turquoise: rgb(27, 203, 181);
+    --darkBlue: rgb(9, 40, 94);
+    --purple: rgb(158, 121, 236);
+    --yellow: rgb(245, 174, 31);
+    --grey: rgb(195, 198, 200);
+    --darkGrey: rgb(100, 102, 104);
+    --black: rgb(19, 23, 32);
 }
 
 
@@ -26,7 +27,8 @@ html,
 body {
     margin: 0;
     overflow-x: hidden;
-    font-family: 'Kanit', sans-serif;;
+    font-family: 'Kanit', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -36,6 +38,7 @@ body {
 .wrapper {
     max-width: 1170px;
     margin: 0 auto;
+
 }
 
 ul,
@@ -71,7 +74,7 @@ h2::after {
     content: '';
     display: block;
     margin-top: 20px;
-    background: linear-gradient(60deg, var(--purple) 15%, var(--turquoise));
+    background: linear-gradient(60deg,var(--yellow), var(--purple), var(--turquoise));
     height: 2px;
     width: 100%;
 }
@@ -134,11 +137,26 @@ nav {
 .headerVid {
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: center;
     overflow: hidden;
     object-fit: cover;
     width: 100%;
     height: 90vh;
+}
+
+.headerVid::after {
+    content: 'Need a travel trailer for your next Adventure?';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    background-color: rgba(27, 203, 181, 0.5);
 }
 
 .heading {
@@ -180,7 +198,7 @@ input {
 
 .trailerSection {
     text-align: center;
-    margin-top: 150px;
+    padding-top: 150px;
 }
 
 .trailerList {
@@ -196,7 +214,7 @@ input {
 }
 
 .trailerImg {
-    max-height: 350px;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -206,13 +224,37 @@ input {
     box-shadow: 0px 5px 15px var(--grey);
 }
 
-.trailer1 {
+.trailer {
     margin-right: 30px;
+}
+
+.trailer:last-of-type {
+    margin-right: 0;
 }
 
 .details {
     border-bottom: 1px solid var(--grey);
-    padding: 15px 30px;
+}
+
+.details ul {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.details li {
+    border-right: 1px solid var(--grey);
+    padding: 15px 0;
+}
+
+.details li:last-child {
+    border-right: 0;
+    padding: 15px 0;
+}
+
+.details i {
+    color: var(--turquoise);
+    margin-right: 5px;
 }
 
 .description {
@@ -233,22 +275,28 @@ input {
 }
 
 .stepsList {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
     color: white;
 }
 
 .stepsList li {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    margin-right: 20px;
 }
 
 .stepImg {
-    width: 60px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
 }
+
+.stepText * {
+    margin-top: 10px;
+}
+
 
 /* Campground styling */
 
@@ -320,9 +368,43 @@ input {
 /* Footer Styling */
 
 footer {
-    background: var(--darkBlue);
-    padding: 40px;
     margin-top: 150px;
+    position: relative;
+    height: 300px;
+    background: url(/assets/bonfire.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+footer::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(9, 40, 94, 0.9);
+}
+
+.footer {
+    display: grid;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.footer ul {
+    height: 100%;
+}
+
+.footer h3 {
+    color: white;
+}
+
+footer .wrapper:first-of-type {
+    position: relative;
 }
 
 footer a {
