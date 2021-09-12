@@ -15,7 +15,7 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
     --darkBlue: rgb(9, 40, 94);
     --purple: rgb(158, 121, 236);
     --yellow: rgb(245, 174, 31);
-    --grey: rgb(195, 198, 200);
+    --grey: rgb(219, 219, 219);
     --darkGrey: rgb(100, 102, 104);
     --black: rgb(19, 23, 32);
 }
@@ -415,5 +415,5 @@ footer a {
     display: flex;
     height: 40px;
     align-items: center;
-    color: var(--grey);
+    color: var(--darkGrey);
 }
