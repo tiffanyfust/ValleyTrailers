@@ -417,3 +417,46 @@ footer a {
     align-items: center;
     color: var(--darkGrey);
 }
+
+
+
+
+
+/* Trailer Details */
+
+.trailerDetails {
+    display: flex;
+}
+
+.mainContent {
+    flex: 2;
+}
+
+.booking {
+    flex: 1;
+}
+
+.trailerImages {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 500px 100px;
+}
+
+.trailerImages .mainImage img {
+    object-fit: contain;
+    align-self: center;
+    justify-self: center;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.mainImage {
+    display: flex;
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+}
+
+.smallImage {
+    cursor: pointer;
+    z-index: 1;
+}
