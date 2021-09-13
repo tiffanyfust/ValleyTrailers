@@ -6,20 +6,37 @@ const dbRef = db.collection('trailers');
 const storageRef = storage.ref();
 const imagesRef = storageRef.child('hideout');
 
-// console.log(dbRef.get().then((querySnapshot) => {
+// dbRef.get().then((querySnapshot) => {
+//     console.log(querySnapshot)
 //     querySnapshot.forEach((doc) => {
-//         console.log(doc.id, " => ", doc.data().sleeps);
+//         console.log(doc.id, " => ", doc.data().Amenities);
 //     });
-// }))
+// })
 
 const trailers = document.querySelectorAll('.trailer');
-
 
 trailers.forEach((trailer) => {
     trailer.addEventListener('click', () => {
         const trailerId = trailer.id;
+        displayData(trailerId)
     })
 })
+
+const displayData = (trailerId) => {
+    window.addEventListener("load", function() {
+        dbRef.doc(trailerId).get().then((doc) => {
+            const amenities = doc.data().Amenities;
+            const list = document.querySelector('.amenitiesList')
+            for (let i = 0; i < amenities.length; i++) {
+                const li = document.createElement('li');
+                li.innerText = amenities[i];
+                list.append(li);
+            }
+        })
+    });
+}
+displayData('trailer1')
+
 
 // Now we get the references of these images
 imagesRef.listAll().then(function(result) {
