@@ -26,7 +26,7 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 html,
 body {
     margin: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-family: 'Kanit', sans-serif;
     scroll-behavior: smooth;
 }
@@ -425,15 +425,9 @@ footer a {
 /* Trailer Details */
 
 .trailerDetails {
-    display: flex;
-}
-
-.mainContent {
-    flex: 2;
-}
-
-.booking {
-    flex: 1;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 2fr 1fr;
 }
 
 .trailerImages {
@@ -459,4 +453,118 @@ footer a {
 .smallImage {
     cursor: pointer;
     z-index: 1;
+}
+
+
+/* Trailer Info styling */
+
+.trailerHeading,
+.amenitiesSection,
+.detailsSection,
+.ratesSection {
+    margin-top: 40px;
+}
+
+.amenitiesList,
+.detailsList {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ratesList {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+/* Booking Form styling */
+
+.booking {
+    position: sticky;
+    top: 60px;
+    margin-left: 40px;
+    border: 1px solid var(--grey);
+    background-color: white;
+}
+
+.price {
+    background: linear-gradient(60deg, var(--purple) 15%, var(--turquoise));
+    color: white;
+    padding: 20px;
+}
+
+.price span {
+    font-weight: bold;
+}
+
+
+.bookingForm {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    padding: 20px;
+}
+
+label[for="startDate"] {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+}
+
+label[for="endDate"] {
+    grid-row: 1 / 2;
+    grid-column: 4 / 7;
+}
+
+.startDate {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+}
+
+.endDate {
+    grid-row: 2 / 3;
+    grid-column: 4 / 7;
+}
+
+.deliveryHeader {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+}
+
+.deliveryHeader {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+}
+
+label[for="deliveryNo"] {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+}
+
+label[for="deliveryYes"] {
+    grid-row: 3 / 4;
+    grid-column: 5 / 6;
+}
+
+.deliveryYes {
+    grid-row: 3 / 4;
+    grid-column: 6 / 7;
+}
+
+.deliveryNo {
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
+}
+
+.bookingRequest {
+    grid-column: 1 / 7;
+    cursor: pointer;
+    background: linear-gradient(60deg, var(--purple) 15%, var(--turquoise));
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 15px 0px;
 }

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="/assets/icons8_alps_20_HWn_icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Valley Trailers | Rent a trailer for your next Adventure</title>
 </head>
@@ -17,7 +20,7 @@
             <div class="leftNav">
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#trailers">Trailers</a></li>
+                    <li><a href="index.html#trailers">Trailers</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
@@ -34,55 +37,82 @@
             </div>
         </nav>
     </header>
-    <main class="trailerDetails">
-        <section class="mainContent">
-            <section>
-                <ul class="trailerImages">
-                </ul>
+    <div class="wrapper">
+        <main class="trailerDetails">
+            <section class="mainContent">
+                <section>
+                    <ul class="trailerImages">
+                    </ul>
+                </section>
+                <section class="trailerHeading">
+                    <h1>2016 Hideout 178HS</h1>
+                </section>
+                <section class="amenitiesSection">
+                    <h2>Amenities</h2>
+                    <ul class="amenitiesList">
+        
+                    </ul>
+                </section>
+                <section class="detailsSection">
+                    <h2>Details</h2>
+                    <ul class="detailsList">
+                        <li class="model">
+                            <h3>Model</h3>
+                        </li>
+                        <li class="gvwr">
+                            <h3>Weight</h3>
+                        </li>
+                        <li class="length">
+                            <h3>Length</h3>
+                        </li>
+                        <li class="sleeps">
+                            <h3>Sleeps</h3>
+                        </li>
+                    </ul>
+                </section>
+                <section class="ratesSection">
+                    <h2>Rates</h2>
+                    <ul class="ratesList">
+                        <li>$100 / night</li>
+                        <li>$600 / week</li>
+                        <li>Additional nights $80</li>
+                    </ul>
+                </section>
             </section>
-            <section class="trailerHeading">
-                <h1>2016 Hideout 178HS</h1>
-            </section>
-            <section>
-                <h2>Amenities</h2>
-                <ul class="amenitiesList">
-            
-                </ul>
-            </section>
-            <section>
-                <h2>Details</h2>
-                <ul>
-            
-                </ul>
-            </section>
-            <section>
-                <h2>Rates</h2>
-                <ul>
-                    <li>$100 / night</li>
-                    <li>$600 / week</li>
-                    <li>Additional nights $80</li>
-                </ul>
-            </section>
-        </section>
-        <aside class="booking">
-            <div class="price">
+            <aside class="booking">
+                <div class="price">
+                    <p><span>$100 CAD</span> / Night</p>
+                </div>
+                <form action="submit" class="bookingForm">
+                    <label for="startDate">Pick up Date:</label>
+                    <input type="date" name="startDate" class="startDate" id="startDate">
+                    <label for="endDate">Return Date:</label>
+                    <input type="date" name="endDate" class="endDate" id="endDate">
+                    <p class="deliveryHeader">Do you need Delivery?</p>
+                    <label for="deliveryNo">No</label>
+                    <input type="radio" name="delivery" class="deliveryNo" id="deliveryNo" value="no">
+                    <label for="deliveryYes">Yes</label>
+                    <input type="radio" name="delivery" class="deliveryYes" id="deliveryYes" value="yes">
+                    <button type="submit" class="bookingRequest">Request to Book</button>
+                </form>
+            </aside>
+        </main>
+    </div>
 
+    <footer>
+        <div class="wrapper">
+            <div class="footer">
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#trailers">Trailers</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
             </div>
-            <form action="submit">
-                <label for="startDate">Pick up Date:</label>
-                <input type="date" name="startDate" id="startDate">
-                <label for="endDate">Return Date:</label>
-                <input type="date" name="endDate" id="endDate">
-
-                <p>Do you need Delivery?</p>
-                <label for="deliveryNo">No</label>
-                <input type="radio" name="delivery" id="deliveryNo" value="no">
-                <label for="deliveryYes">Yes</label>
-                <input type="radio" name="delivery" id="deliveryYes" value="yes">
-                <button type="submit">Request to Book</button>
-            </form>
-        </aside>
-    </main>
+        </div>
+    </footer>
+    <div class="wrapper"><span class="copyright">Copyright &copy; Valley Trailers</span></div>
 
     <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore-compat.js"></script>

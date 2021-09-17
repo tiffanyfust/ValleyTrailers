@@ -24,6 +24,7 @@ trailers.forEach((trailer) => {
 
 const displayData = (trailerId) => {
     window.addEventListener("load", function() {
+
         dbRef.doc(trailerId).get().then((doc) => {
             const amenities = doc.data().Amenities;
             const list = document.querySelector('.amenitiesList')
@@ -32,6 +33,32 @@ const displayData = (trailerId) => {
                 li.innerText = amenities[i];
                 list.append(li);
             }
+
+            const detailsList = document.querySelector('.detailsList');
+            const gvwr = doc.data().gvwr;
+            const length = doc.data().length;
+            const model = doc.data().model;
+            const sleeps = doc.data().sleeps;
+
+            const modelLi = document.querySelector('.model');
+            const modelP = document.createElement('p');
+            modelP.innerText = model;
+            modelLi.append(modelP);
+
+            const gvwrLi = document.querySelector('.gvwr');
+            const gvwrP = document.createElement('p');
+            gvwrP.innerText = gvwr;
+            gvwrLi.append(gvwrP);
+
+            const lengthLi = document.querySelector('.length');
+            const lengthP = document.createElement('p');
+            lengthP.innerText = length;
+            lengthLi.append(lengthP);
+
+            const sleepsLi = document.querySelector('.sleeps');
+            const sleepsP = document.createElement('p');
+            sleepsP.innerText = sleeps;
+            sleepsLi.append(sleepsP);
         })
     });
 }
