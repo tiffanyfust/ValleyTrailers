@@ -26,7 +26,6 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 html,
 body {
     margin: 0;
-    /* overflow-x: hidden; */
     font-family: 'Kanit', sans-serif;
     scroll-behavior: smooth;
 }
@@ -86,7 +85,19 @@ nav {
 }
 
 .logoContainer {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.logo {
     width: 70px;
+}
+
+.logoContainer p {
+    margin-left: 20px;
 }
 
 .leftNav {
@@ -106,32 +117,81 @@ nav {
 
 .menu li {
     margin-right: 30px;
+    padding: 10px;
     font-weight: bold;
+    overflow: hidden;
+    position: relative;
 }
 
 .menu a {
-    transition: color .15s linear;
+    transition: color 0.2s linear;
 }
 
-.menu a:hover {
+.menu li:hover a {
     color: var(--turquoise);
 }
 
-.menu a::after {
+.menu li::before {
     content: '';
-    display: block;
-    background-color: var(--turquoise);
-    margin-top: 8px;
-    height: 2px;
-    width: 0px;
-    transition: width .2s linear;
-
-}
-
-.menu a:hover::after,
-.menu a:focus::after {  
+    position: absolute;
+    top: 0;
+    left: -100%;
     width: 100%;
+    height: 2px;
+    background-color: var(--turquoise);
+    transition: all 0.5s;
 }
+
+.menu li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--turquoise);
+    transition: all 0.5s;
+}
+
+.menu span::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--turquoise);
+    transition: all 0.5s;
+}
+
+.menu span::after {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--turquoise);
+    transition: all 0.5s;
+}
+
+
+.menu li:hover::before {  
+    left: 0;
+}
+
+.menu li:hover::after {
+    right: 0;
+}
+
+.menu li:hover span::before {
+    top: 0;
+}
+
+.menu li:hover span::after {
+    bottom: 0;
+}
+
 
 .contactInfo {
     margin-left: 20px;
