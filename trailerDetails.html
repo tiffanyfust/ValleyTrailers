@@ -22,10 +22,10 @@
             </div>
             <div class="leftNav">
                 <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#trailers">Trailers</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="index.html">Home</a><span></span></li>
+                    <li><a href="#trailers">Trailers</a><span></span></li>
+                    <li><a href="">About Us</a><span></span></li>
+                    <li><a href="">Contact</a><span></span></li>
                 </ul>
                 <div class="contactInfo">
                     <ul>
@@ -96,11 +96,18 @@
                     <input type="radio" name="delivery" class="deliveryNo" id="deliveryNo" value="no">
                     <label for="deliveryYes">Yes</label>
                     <input type="radio" name="delivery" class="deliveryYes" id="deliveryYes" value="yes">
+
+                    <input type="text" name="name" id="name" placeholder="Your name">
+                    <input type="email" name="email" id="email" placeholder="Email address">
+                    <input type="tel" name="phone" id="phone" placeholder="Phone number">
                     <button type="submit" class="bookingRequest">Request to Book</button>
                 </form>
-                <div style="background:#fff;width:212px;" class="calendarDiv">
+                <div style="background:#fff;" class="calendarDiv">
                     <iframe src="https://www.availcalendar.com/print/14801?mode=5" width="212" height="251" frameborder="0" scrolling="no" title="availabilty calendar"></iframe>
                 </div>
+                <!-- <div style="background:#fff;width:212px;" class="calendarDiv">
+                    <iframe src="https://www.availcalendar.com/print/14801?mode=5" width="212" height="251" frameborder="0" scrolling="no" title="availabilty calendar"></iframe>
+                </div> -->
             </aside>
         </main>
     </div>
@@ -108,7 +115,6 @@
     <footer>
         <div class="wrapper">
             <div class="footer">
-                <h3>Menu</h3>
                 <ul class="footerMenu">
                     <li><a href="index.html">Home</a><span></span></li>
                     <li><a href="index.html#trailers">Trailers</a><span></span></li>
